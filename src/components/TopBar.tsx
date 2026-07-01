@@ -23,7 +23,7 @@ export const TopBar: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto flex justify-between items-center px-4 mb-2 sm:mb-4 text-sm font-medium text-text-secondary select-none">
+    <div className="w-full max-w-lg mx-auto flex justify-between items-center px-4 mb-2 sm:mb-4 text-sm font-medium text-[var(--text-secondary)] select-none">
       <div>{difficulty}</div>
       <div className="flex space-x-6">
         <div>Mistakes: {mistakes}{mistakeLimit ? `/${mistakeLimit}` : ''}</div>

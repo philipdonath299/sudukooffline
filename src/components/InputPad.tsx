@@ -23,20 +23,20 @@ export const InputPad: React.FC = () => {
     <div className="w-full max-w-lg mx-auto mt-4 sm:mt-6 px-2 sm:px-0 select-none">
       {/* Action Controls */}
       <div className="flex justify-between items-center mb-6 sm:mb-8 px-4 max-w-sm mx-auto">
-        <button onClick={undo} className="flex flex-col items-center text-text-secondary hover:text-accent transition-colors active:scale-95">
-          <div className="bg-bg-secondary p-3 rounded-full shadow-sm mb-1"><Undo2 size={24} /></div>
+        <button onClick={undo} className="flex flex-col items-center text-[var(--text-secondary)] hover:text-accent transition-colors active:scale-95">
+          <div className="bg-[var(--bg-secondary)] p-3 rounded-full shadow-sm mb-1"><Undo2 size={24} /></div>
           <span className="text-xs font-medium">Undo</span>
         </button>
-        <button onClick={erase} className="flex flex-col items-center text-text-secondary hover:text-accent transition-colors active:scale-95">
-          <div className="bg-bg-secondary p-3 rounded-full shadow-sm mb-1"><Eraser size={24} /></div>
+        <button onClick={erase} className="flex flex-col items-center text-[var(--text-secondary)] hover:text-accent transition-colors active:scale-95">
+          <div className="bg-[var(--bg-secondary)] p-3 rounded-full shadow-sm mb-1"><Eraser size={24} /></div>
           <span className="text-xs font-medium">Erase</span>
         </button>
-        <button onClick={toggleNotesMode} className={cn("flex flex-col items-center transition-colors active:scale-95", notesMode ? "text-accent" : "text-text-secondary hover:text-accent")}>
-          <div className={cn("p-3 rounded-full shadow-sm mb-1", notesMode ? "bg-accent text-white" : "bg-bg-secondary")}><Pencil size={24} /></div>
+        <button onClick={toggleNotesMode} className={cn("flex flex-col items-center transition-colors active:scale-95", notesMode ? "text-accent" : "text-[var(--text-secondary)] hover:text-accent")}>
+          <div className={cn("p-3 rounded-full shadow-sm mb-1", notesMode ? "bg-accent text-white" : "bg-[var(--bg-secondary)]")}><Pencil size={24} /></div>
           <span className="text-xs font-medium">Notes</span>
         </button>
-        <button onClick={hint} className="flex flex-col items-center text-text-secondary hover:text-accent transition-colors active:scale-95 relative">
-          <div className="bg-bg-secondary p-3 rounded-full shadow-sm mb-1"><Lightbulb size={24} /></div>
+        <button onClick={hint} className="flex flex-col items-center text-[var(--text-secondary)] hover:text-accent transition-colors active:scale-95 relative">
+          <div className="bg-[var(--bg-secondary)] p-3 rounded-full shadow-sm mb-1"><Lightbulb size={24} /></div>
           <span className="text-xs font-medium">Hint</span>
           {hintsUsed > 0 && <span className="absolute -top-1 -right-1 bg-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">{hintsUsed}</span>}
         </button>
@@ -52,7 +52,7 @@ export const InputPad: React.FC = () => {
               "aspect-[4/5] sm:aspect-square flex items-center justify-center text-3xl sm:text-4xl rounded-xl shadow-sm transition-all duration-150 active:scale-95",
               inputMode === 'number-first' && selectedNumber === num
                 ? "bg-accent text-white font-semibold"
-                : "bg-bg-secondary text-text-input hover:bg-cell-bg-highlight font-medium"
+                : "bg-[var(--bg-secondary)] text-[var(--text-input)] hover:bg-[var(--cell-bg-highlight)] font-medium"
             )}
           >
             {num}

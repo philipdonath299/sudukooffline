@@ -26,7 +26,7 @@ export const Game: React.FC = () => {
   }, [board, newGame]);
 
   return (
-    <div className="min-h-screen bg-bg-primary text-text-primary flex flex-col items-center pt-safe-area-pt pb-safe-area-pb">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] flex flex-col items-center pt-safe-area-pt pb-safe-area-pb">
       <header className="w-full max-w-lg px-4 py-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold tracking-tight">Sudoku</h1>
         <button onClick={() => newGame('Medium')} className="text-sm font-medium text-accent hover:text-accent-hover transition-colors">

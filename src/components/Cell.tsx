@@ -18,7 +18,7 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
           <div key={num} className="flex items-center justify-center">
             <span className={cn(
               "text-[0.55rem] sm:text-[0.65rem] leading-none select-none",
-              notes.includes(num) ? "text-text-secondary" : "text-transparent"
+              notes.includes(num) ? "text-[var(--text-secondary)]" : "text-transparent"
             )}>
               {num}
             </span>
@@ -40,9 +40,9 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
         "relative w-full aspect-square cursor-pointer touch-manipulation select-none flex items-center justify-center",
         "transition-colors duration-150",
         rightBorder, bottomBorder,
-        isError ? 'bg-cell-bg-error' :
-        isSelected ? 'bg-cell-bg-selected' :
-        isHighlighted ? 'bg-cell-bg-highlight' : 'bg-[var(--cell-bg)]'
+        isError ? 'bg-[var(--cell-bg-error)]' :
+        isSelected ? 'bg-[var(--cell-bg-selected)]' :
+        isHighlighted ? 'bg-[var(--cell-bg-highlight)]' : 'bg-[var(--cell-bg)]'
       )}
     >
       {value !== 0 ? (
@@ -52,8 +52,8 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
           transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           className={cn(
             "text-xl sm:text-2xl md:text-3xl font-medium",
-            isError ? "text-text-error" : 
-            isFixed ? "text-text-fixed font-bold" : "text-text-input",
+            isError ? "text-[var(--text-error)]" : 
+            isFixed ? "text-[var(--text-fixed)] font-bold" : "text-[var(--text-input)]",
             isMatchingValue && !isSelected ? "scale-110 font-bold" : ""
           )}
         >
