@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f3f4f6; /* gray-100 */
+    --bg-secondary: #ffffff; /* white */
+    --text-primary: #111827; /* gray-900 */
+    --text-secondary: #4b5563; /* gray-600 */
+    --border-color: #d1d5db; /* gray-300 */
+    --accent: #3b82f6; /* blue-500 */
+    --accent-hover: #2563eb; /* blue-600 */
+    --cell-bg: #ffffff;
+    --cell-bg-selected: #bfdbfe; /* blue-200 */
+    --cell-bg-highlight: #dbeafe; /* blue-100 */
+    --cell-bg-error: #fecaca; /* red-200 */
+    --text-error: #ef4444; /* red-500 */
+    --text-fixed: #111827;
+    --text-input: #2563eb;
+  }
+
+  .dark {
+    --bg-primary: #111827; /* gray-900 */
+    --bg-secondary: #1f2937; /* gray-800 */
+    --text-primary: #f9fafb; /* gray-50 */
+    --text-secondary: #9ca3af; /* gray-400 */
+    --border-color: #374151; /* gray-700 */
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa; /* blue-400 */
+    --cell-bg: #1f2937;
+    --cell-bg-selected: #1e3a8a; /* blue-900 */
+    --cell-bg-highlight: #172554; /* blue-950 */
+    --cell-bg-error: #7f1d1d; /* red-900 */
+    --text-error: #f87171; /* red-400 */
+    --text-fixed: #f9fafb;
+    --text-input: #60a5fa;
+  }
+
+  .amoled {
+    --bg-primary: #000000;
+    --bg-secondary: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border-color: #27272a;
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+    --cell-bg: #000000;
+    --cell-bg-selected: #1e3a8a;
+    --cell-bg-highlight: #172554;
+    --cell-bg-error: #450a0a;
+    --text-error: #f87171;
+    --text-fixed: #ffffff;
+    --text-input: #60a5fa;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    /* iOS specific optimizations */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+@layer utilities {
+  .safe-area-pt {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-area-pb {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  .sudoku-border {
+    border-color: var(--border-color);
+  }
+}
