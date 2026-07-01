@@ -52,7 +52,7 @@ export const InputPad: React.FC = () => {
               "aspect-[4/5] sm:aspect-square flex items-center justify-center text-3xl sm:text-4xl rounded-xl shadow-sm transition-all duration-150 active:scale-95",
               inputMode === 'number-first' && selectedNumber === num
                 ? "bg-accent text-white font-semibold"
-                : "bg-[var(--bg-secondary)] text-[var(--text-input)] hover:bg-[var(--cell-bg-highlight)] font-medium"
+                : "bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-[var(--cell-bg-highlight)] font-medium"
             )}
           >
             {num}
