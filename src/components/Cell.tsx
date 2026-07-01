@@ -41,7 +41,7 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
         "transition-colors duration-150",
         rightBorder, bottomBorder,
         isError ? 'bg-cell-bg-error' :
-        isSelected ? 'bg-cell-bg-selected' :
+        isSelected ? 'bg-cell-bg-selected ring-inset ring-2 ring-white/50 z-20 scale-[1.05] shadow-lg rounded-sm' :
         isHighlighted ? 'bg-cell-bg-highlight' : 
         isAltBox ? 'bg-[var(--cell-bg-alt)]' : 'bg-[var(--cell-bg)]'
       )}
