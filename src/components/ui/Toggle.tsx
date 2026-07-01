@@ -23,7 +23,7 @@ export const Toggle: React.FC<ToggleProps> = ({ checked, onChange, label, descri
       >
         <div 
           className={cn(
-            "absolute top-[2px] left-[2px] bg-white w-6 h-6 rounded-full shadow-sm transition-transform duration-200 ease-in-out",
+            "absolute top-[2px] left-[2px] bg-[var(--bg-primary)] w-6 h-6 rounded-full shadow-sm transition-transform duration-200 ease-in-out",
             checked ? "translate-x-5" : "translate-x-0"
           )}
         />

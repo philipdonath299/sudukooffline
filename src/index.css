@@ -2,21 +2,21 @@
 
 @layer base {
   :root {
-    --bg-primary: #f5f5f4; /* stone-100 */
-    --bg-secondary: #fafaf9; /* stone-50 */
-    --text-primary: #44403c; /* stone-700 */
-    --text-secondary: #78716c; /* stone-500 */
-    --border-color: #a8a29e; /* stone-400 */
-    --accent: #78716c; /* stone-500 */
-    --accent-hover: #57534e; /* stone-600 */
-    --cell-bg: #fafaf9;
-    --cell-bg-alt: #f5f5f4; /* stone-100 */
-    --cell-bg-selected: #d6d3d1; /* stone-300 */
-    --cell-bg-highlight: #e7e5e4; /* stone-200 */
-    --cell-bg-error: #fecaca; /* red-200 */
-    --text-error: #ef4444; /* red-500 */
-    --text-fixed: #292524; /* stone-800 */
-    --text-input: #57534e; /* stone-600 */
+    --bg-primary: #D1BB99; 
+    --bg-secondary: #E0C9A6; 
+    --text-primary: #292524; 
+    --text-secondary: #57534e; 
+    --border-color: #BCA37F; 
+    --accent: #57534e; 
+    --accent-hover: #44403c; 
+    --cell-bg: #E0C9A6;
+    --cell-bg-alt: #D1BB99; 
+    --cell-bg-selected: #C2A782; 
+    --cell-bg-highlight: #D8C2A0; 
+    --cell-bg-error: #F2C2C2; 
+    --text-error: #B91C1C; 
+    --text-fixed: #1C1917; 
+    --text-input: #44403c; 
   }
 
   .dark {
