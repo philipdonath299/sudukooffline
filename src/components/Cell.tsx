@@ -54,6 +54,7 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
           className={cn(
             "text-xl sm:text-2xl md:text-3xl font-medium",
             isError ? "text-text-error" : 
+            isSelected ? "text-white font-bold" :
             isFixed ? "text-text-fixed font-bold" : "text-text-input",
             isMatchingValue && !isSelected ? "scale-110 font-bold" : ""
           )}
