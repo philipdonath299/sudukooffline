@@ -33,6 +33,7 @@ interface GameStore extends GameState {
   setTimer: (time: number) => void;
   togglePause: () => void;
   checkGameCompletion: (boardToCheck: CellData[][]) => void;
+  hasSavedGame: () => boolean;
 }
 
 const createEmptyState = (): GameState => ({
@@ -58,6 +59,20 @@ export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
       ...createEmptyState(),
+
+      hasSavedGame: () => {
+        const { board, isGameOver } = get();
+        if (isGameOver) return false;
+        // Check if board has any values set by user
+        for (let r = 0; r < 9; r++) {
+          for (let c = 0; c < 9; c++) {
+            if (board[r][c].value !== 0 && !board[r][c].isFixed) {
+              return true;
+            }
+          }
+        }
+        return false;
+      },
 
       newGame: (difficulty) => {
         const { puzzle, solution } = generatePuzzle(difficulty);

@@ -24,6 +24,17 @@ export interface GameSettings {
   timerEnabled: boolean;
   mistakeLimit: number | null; // null for no limit
   inputMode: 'cell-first' | 'number-first';
+  animationSpeed: 'fast' | 'normal' | 'slow';
+  defaultDifficulty: Difficulty;
+  masterSound: boolean;
+  buttonSounds: boolean;
+  winSound: boolean;
+  largerNumbers: boolean;
+  highContrast: boolean;
+  colorblindMode: boolean;
+  reduceMotion: boolean;
+  showCandidates: boolean;
+  highlightMatchingNumbers: boolean;
 }
 
 export interface GameHistoryState {
