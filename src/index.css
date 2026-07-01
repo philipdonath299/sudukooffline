@@ -22,7 +22,7 @@
   .dark {
     --bg-primary: #000000;
     --bg-secondary: #000000;
-    --text-primary: #ffffff;
+    --text-primary: #e5e5e5;
     --text-secondary: #a1a1aa;
     --border-color: #27272a;
     --accent: #3b82f6;
@@ -33,14 +33,14 @@
     --cell-bg-highlight: #172554; /* blue-950 */
     --cell-bg-error: #7f1d1d; /* red-900 */
     --text-error: #f87171; /* red-400 */
-    --text-fixed: #f9fafb;
+    --text-fixed: #e5e5e5;
     --text-input: #60a5fa;
   }
 
   .amoled {
     --bg-primary: #000000;
     --bg-secondary: #000000;
-    --text-primary: #ffffff;
+    --text-primary: #e5e5e5;
     --text-secondary: #a1a1aa;
     --border-color: #27272a;
     --accent: #3b82f6;
@@ -51,7 +51,7 @@
     --cell-bg-highlight: #172554;
     --cell-bg-error: #450a0a;
     --text-error: #f87171;
-    --text-fixed: #ffffff;
+    --text-fixed: #e5e5e5;
     --text-input: #60a5fa;
   }
 
