@@ -31,7 +31,7 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
   const rightBorder = (col === 2 || col === 5) ? 'border-r-[3px] border-r-border-color z-10' : 'border-r border-r-border-color/30';
   const bottomBorder = (row === 2 || row === 5) ? 'border-b-[3px] border-b-border-color z-10' : 'border-b border-b-border-color/30';
 
-  const isAltBox = (Math.floor(row / 3) + Math.floor(col / 3)) % 2 !== 0;
+
 
   return (
     <div
@@ -41,9 +41,8 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
         "transition-colors duration-150",
         rightBorder, bottomBorder,
         isError ? 'bg-cell-bg-error' :
-        isSelected ? 'bg-cell-bg-selected ring-inset ring-2 ring-white/50 z-20 scale-[1.05] shadow-lg rounded-sm' :
-        isHighlighted ? 'bg-cell-bg-highlight' : 
-        isAltBox ? 'bg-[var(--cell-bg-alt)]' : 'bg-[var(--cell-bg)]'
+        isSelected ? 'bg-cell-bg-selected' :
+        isHighlighted ? 'bg-cell-bg-highlight' : 'bg-[var(--cell-bg)]'
       )}
     >
       {value !== 0 ? (
@@ -54,7 +53,6 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
           className={cn(
             "text-xl sm:text-2xl md:text-3xl font-medium",
             isError ? "text-text-error" : 
-            isSelected ? "text-white font-bold" :
             isFixed ? "text-text-fixed font-bold" : "text-text-input",
             isMatchingValue && !isSelected ? "scale-110 font-bold" : ""
           )}
