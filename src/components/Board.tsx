@@ -20,7 +20,7 @@ export const Board: React.FC = () => {
   if (!board || board.length === 0 || board[0].length === 0) return null;
 
   return (
-    <div className="w-full max-w-lg mx-auto bg-border-color border-2 border-border-color rounded-sm shadow-sm overflow-hidden select-none touch-manipulation">
+    <div className="w-full max-w-lg mx-auto bg-[var(--border-color)] border-2 border-[var(--border-color)] rounded-sm shadow-sm overflow-hidden select-none touch-manipulation">
       <div className="grid grid-cols-9 grid-rows-9 gap-[1px]">
         {board.map((row, rIndex) =>
           row.map((cell, cIndex) => (

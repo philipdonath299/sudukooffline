@@ -2,20 +2,20 @@
 
 @layer base {
   :root {
-    --bg-primary: #f3f4f6; /* gray-100 */
-    --bg-secondary: #ffffff; /* white */
-    --text-primary: #111827; /* gray-900 */
-    --text-secondary: #4b5563; /* gray-600 */
-    --border-color: #d1d5db; /* gray-300 */
+    --bg-primary: #f5f5f4; /* stone-100 */
+    --bg-secondary: #fafaf9; /* stone-50 */
+    --text-primary: #44403c; /* stone-700 */
+    --text-secondary: #78716c; /* stone-500 */
+    --border-color: #a8a29e; /* stone-400 */
     --accent: #3b82f6; /* blue-500 */
     --accent-hover: #2563eb; /* blue-600 */
-    --cell-bg: #ffffff;
-    --cell-bg-alt: #f3f4f6; /* gray-100 */
-    --cell-bg-selected: #e5e7eb; /* gray-200 */
+    --cell-bg: #fafaf9;
+    --cell-bg-alt: #f5f5f4; /* stone-100 */
+    --cell-bg-selected: #e7e5e4; /* stone-200 */
     --cell-bg-highlight: #dbeafe; /* blue-100 */
     --cell-bg-error: #fecaca; /* red-200 */
     --text-error: #ef4444; /* red-500 */
-    --text-fixed: #111827;
+    --text-fixed: #292524; /* stone-800 */
     --text-input: #2563eb;
   }
 

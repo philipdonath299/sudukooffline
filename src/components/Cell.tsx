@@ -28,8 +28,8 @@ export const Cell: React.FC<CellProps> = ({ data, onClick }) => {
     );
   };
 
-  const rightBorder = (col === 2 || col === 5) ? 'border-r-[3px] border-r-border-color z-10' : 'border-r border-r-border-color/30';
-  const bottomBorder = (row === 2 || row === 5) ? 'border-b-[3px] border-b-border-color z-10' : 'border-b border-b-border-color/30';
+  const rightBorder = (col === 2 || col === 5) ? 'border-r-[3px] border-r-[var(--border-color)] z-10' : '';
+  const bottomBorder = (row === 2 || row === 5) ? 'border-b-[3px] border-b-[var(--border-color)] z-10' : '';
 
 
 
